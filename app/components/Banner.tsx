@@ -63,7 +63,7 @@ export default function Banner() {
         </a>
 
         <a
-          href="https://drive.google.com/file/d/1s_beMVesUZsV7san7URbUTr0l1LOnols/view?usp=sharing"
+          href="/portfolio/https://drive.google.com/file/d/1s_beMVesUZsV7san7URbUTr0l1LOnols/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2.5 rounded-lg text-xs font-semibold text-gray-300 border border-white/10 hover:border-white/25 hover:text-white bg-white/[0.02] transition-all flex items-center gap-2"
