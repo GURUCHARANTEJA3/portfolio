@@ -1,78 +1,81 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
-const ROLES = [
-  "Python Developer",
-  "Full-Stack Engineer",
-  "AI / ML & RAG Builder",
-  "Data Analyst"
-  // "System Architect",
-];
+import Image from "next/image";
 
 export default function Banner() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % ROLES.length);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="relative pt-24 pb-20 max-w-5xl mx-auto px-6">
-      {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/15 rounded-full blur-[110px] pointer-events-none" />
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-purple-600/15 blur-[130px] rounded-full pointer-events-none" />
 
-      {/* Status indicator */}
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/[0.06] mb-8">
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-        <span className="text-[11px] font-mono font-medium text-emerald-300">
-          Available for SDE / Python / AI Roles
-        </span>
-      </div>
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8">
+          
+          {/* Bio Column */}
+          <div className="flex-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              Available for Opportunities • Kadapa, AP, India
+            </div>
 
-      {/* Hero Headline */}
-      <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-        Hi, I&apos;m <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 bg-clip-text text-transparent">Guru Charan Teja</span>.
-      </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3">
+              Hi, I'm{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400">
+                Guru Charan Teja
+              </span>
+            </h1>
 
-      {/* Animated Role Ticker */}
-      <div className="h-9 flex items-center mb-6">
-        <span className="font-mono text-xl sm:text-2xl text-purple-400 font-semibold transition-all">
-          &gt; {ROLES[index]}
-        </span>
-      </div>
+            <p className="text-base sm:text-lg text-purple-300 font-mono mb-5">
+              Python Developer • Full-Stack Developer • AI/ML Engineer
+            </p>
 
-      {/* Senior Bio */}
-      <p className="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed mb-10">
-        Computer Science graduate specializing in Python backends, production-grade LLM/RAG pipelines, and high-performance microservices. Passionate about clean code, robust architecture, and scalable software.
-      </p>
+            <p className="text-gray-300/80 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
+              Computer Science graduate with hands-on expertise in Python, AI/ML (RAG, LangChain), 
+              REST APIs, and responsive front-end engineering. Passionate about building robust, 
+              scalable systems and production-grade intelligent platforms.
+            </p>
 
-      {/* Primary Action Buttons */}
-      <div className="flex flex-wrap items-center gap-4">
-        <a
-          href="#projects"
-          className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-purple-600 hover:bg-purple-500 shadow-md shadow-purple-600/20 transition-all flex items-center gap-2"
-        >
-          <span>Explore Projects</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
+            {/* Actions */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all shadow-lg shadow-purple-600/25 hover:shadow-purple-600/40"
+              >
+                View Projects
+              </a>
 
-        <a
-          href="/portfolio/https://drive.google.com/file/d/1s_beMVesUZsV7san7URbUTr0l1LOnols/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-5 py-2.5 rounded-lg text-xs font-semibold text-gray-300 border border-white/10 hover:border-white/25 hover:text-white bg-white/[0.02] transition-all flex items-center gap-2"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <span>Download Resume</span>
-        </a>
+              <a
+                href="/portfolio/https://drive.google.com/file/d/1s_beMVesUZsV7san7URbUTr0l1LOnols/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-xl border border-white/10 hover:border-white/25 bg-white/[0.04] hover:bg-white/[0.08] text-gray-200 font-medium text-sm transition-all backdrop-blur-sm"
+              >
+                Download Resume (PDF)
+              </a>
+            </div>
+          </div>
+
+          {/* Photo Column */}
+          <div className="flex-shrink-0 relative">
+            <div className="relative group">
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-500 opacity-40 group-hover:opacity-75 blur-xl transition duration-500" />
+              
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border border-white/15 bg-[#120d20] shadow-2xl">
+                <Image
+                  src="/profile.jpg"
+                  alt="Paramesugalla Guru Charan Teja"
+                  fill
+                  sizes="(max-width: 768px) 256px, 288px"
+                  className="object-cover object-top transition duration-500 group-hover:scale-105"
+                  priority
+                />
+              </div>
+
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#0b0616]/95 border border-white/15 px-4 py-1 rounded-full text-xs font-mono text-purple-300 shadow-lg backdrop-blur-md">
+                ⚡ Python & AI Developer
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
