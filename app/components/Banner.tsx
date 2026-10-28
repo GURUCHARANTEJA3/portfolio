@@ -60,7 +60,7 @@ export default function Banner() {
               
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border border-white/15 bg-[#120d20] shadow-2xl">
                 <Image
-                  src="/profile.jpg"
+                  src="./profile.jpeg"
                   alt="Paramesugalla Guru Charan Teja"
                   fill
                   sizes="(max-width: 768px) 256px, 288px"
